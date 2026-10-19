@@ -1,21 +1,29 @@
 ﻿# AI Prompt Log
 
 ## Initial prompt
-The exact initial AI prompt used to generate the charting script was not preserved in the available project records. It is not reconstructed or presented as a verbatim prompt.
+The charting task was to write a Python script that loads the
+Section 2 JSON output and generates a matplotlib bar chart comparing
+average temperature per device.
 
-## Bug in the first attempt
-The first-attempt charting bug could not be verified from the available records. No specific bug is claimed here without evidence.
+Note: The exact original prompt wording was not preserved, so this
+is a summary of the request, not a verbatim transcript.
+
+## First-attempt bug
+The available records do not preserve the first chart attempt or a
+verified formatting bug. I have not attributed an unverified bug to
+the first attempt.
 
 ## Follow-up prompt
-The exact follow-up prompt used to fix a first-attempt charting bug was not preserved in the available project records. No verbatim follow-up prompt or unverified fix is claimed.
+The exact original follow-up prompt was not preserved. The chart
+script was reviewed for a title, axis labels, readable value labels,
+layout spacing, and reliable image saving.
 
 ## Verification
-Commands run during the current verification:
-- `python .\main.py --input ".\demo_device_telemetry.csv" --output ".\output\summary.json"` — completed successfully.
-- `python .\plot.py` — chart saved to `output\temperature_chart.png`.
 - `python -m pytest -v` — 3 tests passed.
-- `python -m py_compile .\cleaning.py .\main.py .\plot.py` — completed successfully.
+- `python -m py_compile .\cleaning.py .\main.py .\plot.py` — passed.
+- `python .\main.py --input .\demo_device_telemetry.csv --output .\output\summary.json` — succeeded with demo data.
+- `python .\plot.py` — generated `output\temperature_chart.png`.
 
-The demo dataset produced summaries for DEV_A, DEV_B, DEV_C, and DEV_D. DEV_C had an average temperature of 86.50 and was flagged by the greater-than-80 threshold.
-
-Important: `demo_device_telemetry.csv` is demo data, not the original assessment CSV. The final assessment output must be regenerated with the supplied assessment dataset when it becomes available.
+Important: The demo CSV is not the original assessment dataset.
+Regenerate and verify the final output using the supplied
+`device_telemetry.csv` before claiming validation against that dataset.
