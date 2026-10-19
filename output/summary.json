@@ -1,20 +1,36 @@
-[
-  {
-    "device_id": "DEV_A",
-    "total_records": 3,
-    "average_temperature": 48.33,
-    "error_count": 1
-  },
-  {
-    "device_id": "DEV_B",
-    "total_records": 3,
-    "average_temperature": 74.0,
-    "error_count": 1
-  },
-  {
-    "device_id": "DEV_D",
-    "total_records": 2,
-    "average_temperature": 37.5,
-    "error_count": 1
-  }
-]
+{
+  "devices": [
+    {
+      "device_id": "DEV_A",
+      "record_count": 3,
+      "average_temperature": 48.33,
+      "error_count": 1
+    },
+    {
+      "device_id": "DEV_B",
+      "record_count": 3,
+      "average_temperature": 74.0,
+      "error_count": 1
+    },
+    {
+      "device_id": "DEV_C",
+      "record_count": 2,
+      "average_temperature": 86.5,
+      "error_count": 0
+    },
+    {
+      "device_id": "DEV_D",
+      "record_count": 2,
+      "average_temperature": 37.5,
+      "error_count": 1
+    }
+  ],
+  "high_temperature_devices": [
+    {
+      "device_id": "DEV_C",
+      "record_count": 2,
+      "average_temperature": 86.5,
+      "error_count": 0
+    }
+  ]
+}
